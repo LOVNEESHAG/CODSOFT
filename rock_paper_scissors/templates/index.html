@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rock Paper Scissors</title>
+    <style>
+      body{
+        background-color: black;
+      }
+      h1{
+        display: flex;
+        justify-content: center;
+        border: 2px solid none;
+        border-radius: 10px;
+        background-color: brown;
+        color: white;
+        padding: 10px;
+      }
+
+      form{
+        display: flex;
+        justify-content: center;
+      }
+
+      button{
+        margin: 3px;
+        padding: 10px;
+        background-color: aliceblue;
+      }
+
+      button:hover{
+        background-color: rgb(255, 190, 190);
+      }
+
+      h2,p{
+        color: aliceblue;
+        display: flex;
+        justify-content: center;
+      }
+
+      h3{
+        display: flex;
+        justify-content: end;
+        color: aliceblue;
+      }
+
+    </style>
+</head>
+<body>
+    <h1>Play Rock Paper Scissors</h1>
+    <h3>By Lovneesh Agrawal</h3>
+    <form method="POST" action="/game">
+        <button name="choice" value="rock">Rock</button>
+        <button name="choice" value="paper">Paper</button>
+        <button name="choice" value="scissors">Scissors</button>
+    </form>
+
+    {% if result %}
+        <h2>Result:</h2>
+        <p>You chose: {{ operation }}</p>
+        <p>Computer chose: {{ comp }}</p>
+        <p><strong>{{ result }}</strong></p>
+    {% endif %}
+</body>
+</html>
+
